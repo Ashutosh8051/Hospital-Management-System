@@ -1,9 +1,9 @@
 # Hospital-Management-System (MAX 24 x 7)
 ## Created and Developed by "Ashutosh Kumar Choudhary" "Manitosh Paul" "Shree Ganesh"
-### The project is based on Hospital Management   
-### The Project Contain Two Module USER and ADMINISTRATOR. There are various section such as Home ,About, Feature, Services ,Enqiry ,Contact and EMERGENCY.
-### Hopital provides various types of traetment such as Neurology, Neurosurgery, Nephrology ,Cardiology, Gynecology & Obstetrics, Oncology, Physiotherapy, Dialysis and also 
-### 24x7 Ambulance Available, 24x7 Emergency Service, ICU Trauma Care.
+##### The project is based on Hospital Management   
+##### The Project Contain Two Module USER and ADMINISTRATOR. There are various section such as Home ,About, Feature, Services ,Enqiry ,Contact and EMERGENCY.
+##### Hopital provides various types of traetment such as Neurology, Neurosurgery, Nephrology ,Cardiology, Gynecology & Obstetrics, Oncology, Physiotherapy, Dialysis and also 
+##### 24x7 Ambulance Available, 24x7 Emergency Service, ICU Trauma Care.
 
                                            **************         USER             *****************
                                             
