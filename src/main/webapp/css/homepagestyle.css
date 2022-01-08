@@ -1,0 +1,874 @@
+@charset "ISO-8859-1";
+/* universal styling  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* scroll bar design  */
+html::-webkit-scrollbar{
+    width: 0.3rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--primary);
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--pure);
+}
+html::-webkit-scrollbar-button{
+    display: none;
+}
+/* scroll bar design  */
+body{
+    font-size: 62.5%;
+    background-color: var(--bg);
+}
+.hidden{
+	display:none;
+}
+/* universal styling  */
+
+/* variables */
+:root{
+    --primary: #16A085;
+    --pure: #fff;
+    --bg: #F5FFFA;
+    --text: rgb(48, 47, 47);
+}
+/* variables */
+
+/* utility classes */
+.d-flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.m-l{
+    margin-left: 2rem;
+}
+.m-r{
+    margin-right: 2rem;
+}
+.btn-light{
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.btn-light:hover{
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-dark{
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-light:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.heading{
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 10vh;
+}
+.heading h1{
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary);
+    animation: text_color 8s linear infinite;
+}
+.div-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* utility classes */
+
+/* container */
+.container{
+    max-width: 2000px;
+    margin: 0 auto;
+    background-color: var(--pure);
+    font-family: cursive;
+}
+/* container */
+
+/* home page  */
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+nav{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary);
+    justify-content: space-between;
+}
+nav div{
+    width: 30%;
+    height: 100%;
+}
+.logo_ham{
+    justify-content: space-between;
+}
+.logo_ham h3{
+    font-size: 1.3rem;
+    color: var(--pure);
+}
+nav .hamburger{
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+}
+nav .hamburger div{
+    width: 80%;
+    height: 1px;
+    background-color: var(--pure);
+    position: absolute;
+}
+nav .hamburger div:nth-of-type(1){
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav .hamburger div:nth-of-type(2){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+nav .hamburger div:nth-of-type(3){
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav .nav_links{
+    justify-content: space-around;
+}
+nav .nav_links a{
+    font-size: 0.7rem;
+    color: var(--pure);
+    padding: 0.5rem 1rem;
+}
+nav .nav_links a:hover{
+    background-color: var(--pure);
+    color: var(--primary);
+}
+nav .emergency{
+    justify-content: flex-end;
+}
+nav .emergency a{
+    font-size: 1rem;
+    color: red;
+}
+nav .emergency a:hover{
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    background-color: red;
+    color: var(--pure);
+}
+
+/* home body  */
+.home_body{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 10vh;
+}
+.home_body img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.b_overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(1px);
+}
+.home_body .home_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home_body .home_container .left_box{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+.home_body .home_container .white_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 85%;
+    background-color: var(--pure);
+}
+.home_body .home_container .white_box:hover{
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+.home_body .home_container .white_box .border1{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -10%);
+   width: 65%;
+   height: 50%;
+   border-radius: 50%;
+   border: 0.6rem solid var(--primary);
+}
+.home_body .home_container .white_box .border1 img{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    border-radius: 50%;
+    transform: translate(-50%, -10%);
+    width: 90%;
+    height: 90%;
+}
+.home_body .home_container .white_box .doctorsquote{
+    position: absolute;
+    top: 60%;
+   width: 100%;
+   height: 40%;
+   flex-direction: column;
+}
+.home_body .home_container .white_box .doctorsquote i{
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+.fa-quote-left{
+    top: 0;
+    left: 0;
+    margin-left: 0.5rem;
+}
+.fa-quote-right{
+    bottom: 0;
+    right: 0;
+    margin-right: 0.5rem;
+}
+
+.home_body .home_container .white_box .doctorsquote p{
+    width: 100%;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: bold;
+}
+.home_body .home_container .white_box .doctorsquote .quote1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+.home_body .home_container .white_box .doctorsquote .quote2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home_body .home_container .right_box{
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+.home_body .home_container .right_box .home_text_container{
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-around;
+}
+.home_body .home_container .right_box .home_text_container h3{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--pure);
+}
+.blood{
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+.blood img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.blood img:hover{
+    transform: scale(1.19);
+}
+.home_body .home_container .right_box .home_text_container h2{
+    font-size: 2rem;
+    animation: text_color 8s linear infinite;
+}
+@keyframes text_color {
+    0%{
+        color: #16A085;
+    }
+    25%{
+        color: #35B568;
+    }
+    50%{
+        color: #54CA4B;
+    }
+    75%{
+        color: #72DE2D;
+    }
+    90%{
+        color: #91F310;
+    }
+    100%{
+        color: #16A085;
+    }
+}
+/* home body  */
+/* home page  */
+
+/* about page  */
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.about .aboutcontainer{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 20vh;
+}
+.aboutimg{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.aboutimg .greenbg{
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+    background-color: var(--primary);
+}
+.aboutimg .greenbg img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: var(--primary);
+}
+.abouttext{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+.abouttext p{
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+.abouttext h2{
+    color: var(--primary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+/* about page  */
+/* features page  */
+.features{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+.featurescontainer{
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 20vh;
+    background-color: green;
+    justify-content: space-around;
+}
+.featurescontainer .div{
+    width: 30%;
+    height: 80%;
+    background-color: var(--pure);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+}
+.featurescontainer .div .iconbox{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+}
+.featurescontainer .div .iconbox .ambulance{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    /* background-color: violet; */
+}
+.featurescontainer .div .iconbox .ambulance .icon{
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+}
+.featurescontainer .div .iconbox .ambulance .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+.featurescontainer .div .iconbox .icontext{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+.featurescontainer .div .iconbox .icontext h3{
+    font-size: 1rem;
+}
+.featurescontainer .div:hover .icon{
+    background-color: var(--primary);
+}
+.featurescontainer .div:hover i{
+    color: var(--pure);
+}
+.featurescontainer .div:hover .icontext h3{
+    color: var(--primary);
+}
+/* features page  */
+
+/* services page  */
+.services{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    flex-direction: column;
+}
+.servicescontainer{
+    position: absolute;
+    background-color: var(--primary);
+    top: 20vh;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.servicescontainer1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.servicescontainer1 div{
+    width: 18rem;
+    height: 17rem;
+    background-color: white;
+}
+.servicescontainer1 div .servicelink{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.servicescontainer1 div .servicelink .serviceimg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    transform: scale(1);
+}
+.servicescontainer1 div .servicelink:hover .serviceimg{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.servicescontainer1 div .servicelink .caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: var(--pure);
+}
+.servicescontainer1 div .servicelink .caption p{
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    color: #000;
+    border-left: 2px solid var(--primary);
+}
+.servicescontainer1 div .servicelink:hover .caption p{
+    color: var(--primary);
+}
+/* services page  */
+
+/* enquiry form  */
+.enquiry{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.enquiry .polyogon{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0 100%);
+}
+.enquiry .formcontainer{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    top: 20vh;
+}
+.enquiry .formcontainer .formbox{
+    width: 30%;
+    height: 80%;
+    background-color: var(--pure);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+}
+.enquiry .formcontainer .formbox .form{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.enquiry .formcontainer .formbox .form div{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.enquiry .formcontainer .formbox .form div input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid var(--primary); */
+}
+.enquiry .formcontainer .formbox .form div label{
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+.enquiry .formcontainer .formbox .form .submit button{
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.enquiry .formcontainer .formbox .form .submit button:hover{
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+/* enquiry form  */
+/* contact section  */
+footer{
+    width: 100%;
+    height: 60vh;
+    background-color: var(--pure);
+    position: relative;
+    flex-direction: column;
+}
+footer .contact{
+    width: 100%;
+    height: 80%;
+    justify-content: space-between;
+}
+footer .contact .socialmedia{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer .contact .socialmedia div{
+    position: relative;
+    width: 25%;
+    justify-content: space-around;
+}
+footer .contact .socialmedia div:hover{
+    transform: scale(1.15);
+}
+footer .contact .socialmedia div a{
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+footer .contact .socialmedia div a i{
+    font-size: 1.3rem;
+}
+footer .contact .quicklinks{
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer .contact .quicklinks a{
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+footer .contact .quicklinks a:hover{
+    transform: scale(1.15);
+}
+footer .contact .map{
+    width: 30%;
+    height: 100%;
+    padding: 0.5rem;
+}
+footer .credits{
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    position: relative;
+}
+footer .credits::before{
+    content: '';
+    background-color: var(--primary);
+    width: 95%;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+footer .credits p{
+    font-size: 1rem;
+    color: var(--primary);
+}
+/* contact section  */
+/* emergency form  */
+.emergencycontainer{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 10vh;
+}
+.emergencycontainer .polyogon{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0 100%);
+}
+.emergencycontainer .formbox{
+    width: 30%;
+    height: 80%;
+    background-color: var(--pure);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+}
+.emergencycontainer .formbox .form{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.emergencycontainer .formbox .form div{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.emergencycontainer .formbox .form div input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid var(--primary); */
+}
+.emergencycontainer .formbox .form div label{
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+.emergencycontainer .formbox .form div select{
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000;
+}
+.emergencycontainer .formbox .form div select option:disabled{
+    display: none;
+}
+.emergencycontainer .formbox .form div select option:checked{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.emergencycontainer .formbox .form div select:invalid{
+    color: grey;
+}
+.emergencycontainer .formbox .form .submit button{
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.emergencycontainer .formbox .form .submit button:hover{
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+/* emergency form  */
+
+/* Appointment form */
+.appointment{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pure);
+    position: relative;
+}
+.appointment .polyogon{
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0 100%);
+}
+.cancel{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    border: 3px solid var(--primary);
+}
+.cancel:hover{
+    background-color: var(--primary);
+}
+.cancel i{
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+.cancel:hover i{
+    color: var(--pure);
+}
+.appointmentform{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.appointmentform .formbox{
+    width: 30%;
+    height: 90%;
+    background-color: var(--pure);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+}
+.appointmentform .formbox .form{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.appointmentform .formbox .form div{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+.appointmentform .formbox .form div input{
+    width: 100%;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid var(--primary); */
+}
+.appointmentform .formbox .form div input:read-only{
+    background: #16a0842c;
+}
+.appointmentform .formbox .form div label{
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+.appointmentform .formbox .form div select{
+    width: 100%;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #000;
+}
+.appointmentform .formbox .form div select option:disabled{
+    display: none;
+}
+.appointmentform .formbox .form div select option:checked{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.appointmentform .formbox .form div select:invalid{
+    color: grey;
+}
+.appointmentform .formbox .form .submit button{
+    padding: 0.3rem 1rem;
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.appointmentform .formbox .form .submit button:hover{
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+/* Appointment form */
+
+/* javascript */
+.successmsg{
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+}
+.errormsg{
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+}
+/* javascript */
